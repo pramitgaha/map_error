@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "canisters": {
+    "map_backend": {
+      "type": "rust",
+      "package": "map_backend",
+      "candid": "src/map_backend/map_backend.did"
+    },
+    "map_frontend": {
+      "type": "assets",
+      "source": [
+        "src/map_frontend/assets"
+      ],
+      "dependencies": [
+        "map_backend"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "output_env_file": ".env"
+}
